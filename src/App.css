@@ -1,0 +1,89 @@
+body {
+  background :rgb(255, 255, 255);
+  text-align: center; 
+}
+
+h1 {
+  margin: 32px 0;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #000000;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+}
+
+.todo-input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: rgb(167, 167, 167);
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #0a0a0a;
+}
+
+.todo-button.edit {
+  background: rgb(167, 167, 167);
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position:fixed;
+  justify-content: center;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 32px 14px 16px;
+  align-items: center;
+  margin: 4px auto;
+  color: rgb(0, 0, 0);
+  background: rgb(167, 167, 167);
+  border-radius: 5px;
+  width: 412px;
+
+}
+
+.todo-row:nth-child() {
+  background: rgb(167, 167, 167);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 15px;
+  color: rgb(0, 0, 0);
+}
+
+.edit-icon {
+  color: rgb(0, 0, 0);
+}
