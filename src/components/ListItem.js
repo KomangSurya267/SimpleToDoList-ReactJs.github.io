@@ -32,6 +32,13 @@ function ListItem() {
   
       setTasks(removedArr);
     };
+    // tandai apabila task sudah dilakukan
+    const markTask = id => {
+      let mapped = tasks.map(task => {
+        return task.id === id ? { ...task, complete: !task.complete } : { ...task};
+      });
+      setTasks(mapped);
+    };
     // definisikan variabel update dengan id yang akan di update
     const completeTask = id => {
       let updatedTask = tasks.map(task => {
@@ -51,6 +58,7 @@ function ListItem() {
           task={tasks}
           completeTask={completeTask}
           removeTask={removeTask}
+          markTask={markTask}
           updateTask={updateTask}
         />
       </>

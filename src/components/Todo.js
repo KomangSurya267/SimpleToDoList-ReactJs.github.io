@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import Input from './Input';
 import { BiTrash } from 'react-icons/bi'; // packages dari react-icons
 import { BiEditAlt } from 'react-icons/bi';
+import { MdOutlineDoneOutline } from 'react-icons/md';
 
 // definisikan fungsi di ListItem
-const Todo = ({ task, completeTask, removeTask, updateTask }) => {
+const Todo = ({ task, completeTask, removeTask, updateTask, markTask }) => {
   // fungsi edit untuk update
   const [edit, setEdit] = useState({
     id: null, // id tidak dikeluarkan maka nilainya null
-    value: ''
+    value: '',
   });
   // fungsi untuk submit update
   const submitUpdate = value => {
@@ -34,6 +35,9 @@ const Todo = ({ task, completeTask, removeTask, updateTask }) => {
         {task.text}
       </div>
       <div className='icons'>
+        <MdOutlineDoneOutline // penggunaan icons
+          onClick={() => markTask(task.id)} // keluarkan nilai mark
+        />
         <BiTrash // penggunaan icons
           onClick={() => removeTask(task.id)} // keluarkannilai hapus
         />
